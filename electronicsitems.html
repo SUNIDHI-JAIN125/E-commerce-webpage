@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GADA ELECTRONICS STORE</title>
+</head>
+<style>
+    /* for first navigation bar */
+    * {
+        margin: 2px;
+        padding: 0px;
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* :root {
+        --navbar-height: 9px;
+    } */
+
+    #navbar {
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        padding: 0px 0px;
+        border-bottom: 3px solid black;
+        background-color: grey;
+        opacity: 0.9;
+        margin: 0px 0px;
+        height: 120px;
+
+    }
+
+    #navbar::before {
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        /* z-index: -1; */
+        /* opacity: 0.7; */
+    }
+
+    #logo {
+        margin: 10px 34px;
+    }
+
+    #logo img {
+        height: 109px;
+        margin: 4px 1px;
+        padding-left: 2px;
+    }
+
+
+    .btn {
+        font-family: ' Baloo Bhai', cursive;
+        /* display:inline-block ; */
+        font-size: 1rem;
+        padding: auto 3px;
+        margin: 0px 5px;
+        cursor: pointer;
+    }
+ 
+    .right {
+        display: flex;
+        padding: 6px 6px;
+
+    }
+
+    .btn img {
+
+        height: 15px;
+        margin: 0px 76px;
+    }
+
+    #navbar ul {
+        display: flex;
+        font-family: 'Baloo Bhai', cursive;
+
+    }
+
+    #navbar ul li {
+        list-style: none;
+
+        font-size: 1.4rem;
+
+    }
+
+    #navbar ul li a {
+        color: white;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1rem;
+        padding: 3px 36px;
+    }
+
+    .item img {
+        height: 45px;
+        padding: 0px 90px;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+    }
+
+    /*   heading and order section   */
+
+    #main::before {
+        content: "";
+        position: absolute;
+        height: 642px;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        padding: 6px 200px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main h1 {
+
+        color: black;
+        text-align: center;
+        font-family: 'Bree serif', serif;
+        padding-top: 15px;
+        padding-bottom: 17px;
+        font-size: 2.7rem;
+
+    }
+
+    #main p {
+        color: black;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: 'Bree serif', serif;
+        padding-bottom: 23px;
+    }
+
+    .button {
+
+        text-align: center;
+        /* border: 2px solid black; */
+        background-color: red;
+        color: white;
+        margin: 1px;
+        font-size: 1.5rem;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 0px 10px;
+    }
+    .button:hover{
+        background-color: rgb(195, 6, 6);
+        
+    }
+
+    .images {
+        height: 500px;
+        width: 98%;
+        /* border: 2px solid black; */
+        display: flex;
+        padding: 1px 12px;
+
+        padding-bottom: 12px;
+        margin: 4px 0px;
+        /* background-color: rgb(203, 196, 192); */
+
+    }
+
+    .box {
+        width: 300px;
+        height: 200px;
+        /* border: 2px solid black; */
+        margin: 10px;
+        padding: 0px;
+    }
+
+    .box img {
+        height: 200px;
+
+    }
+
+    #image-1 {
+        /* robot */
+        order: 1;
+        padding-left: 0px;
+        height: 300px 1px;
+        margin: 1px 0px;
+    }
+
+    #image-1 img {
+        /* robot */
+        padding: 13px 0px;
+        height: 496px;
+        width: 800px;
+
+    }
+
+    #image-2 {
+        /* laptop */
+        order: 3;
+        flex-basis: 77px;
+        padding-top: 0px;
+        padding-left: 20px;
+
+    }
+
+    #image-2 img {
+        /* laptop */
+        padding-top: 1px;
+        padding-left: 100px;
+        height: 260px;
+        width: 400px;
+        padding-bottom: 1px;
+
+
+    }
+
+    #image-3 {
+        /* mobile */
+        padding: 45px 4px;
+        margin: 7px 7px;
+        align-self: center;
+        order: 2;
+        float: left;
+        margin: 3px 50px;
+    }
+
+    #image-3 img {
+        /* mobile */
+        padding-top: 130px;
+        padding-left: 490px;
+        height: 230px;
+        width: 340px;
+    }
+    #accessories::before {
+        content: "";
+        position: absolute;
+        height: 64px;
+    }
+
+    #accessories {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        padding-bottom: 70px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+ #accessories  h1 {
+
+color: black;
+text-align: center;
+font-family: 'Bree serif', serif;
+padding-top: 70px;
+padding-bottom: 20px;
+font-size: 2rem;
+
+
+}
+#accessories .button{
+     padding: 1px 20px;
+     background-color: rgb(96, 87, 227);
+}
+#accessories .button:hover{
+    
+    background-color:  rgb(23, 5, 139);
+} 
+
+
+
+.items{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(228, 223, 223);
+
+}
+
+.electronic-items{
+    padding: 15px;
+    transition: 1s;
+    
+}
+.electronic-items img{
+    height: 300px;
+    display: block;
+    width: 230px;
+}
+.electronic-items:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 2;
+
+}
+ #img-1 img{
+    height: 250px;
+    width: 210px;
+    padding-left:1px;
+    padding-top: 25px;
+}
+/* #img-1 img :hover{
+    height:300px ;
+    width: 250;
+    cursor: pointer;
+} */
+#img-2 img{
+    height: 240px;
+    width: 200px;
+    padding-bottom: 35px;
+    /* padding-left:0px; */
+    /* margin: 2px 2px; */
+
+}
+#img-3 img{
+    height: 140px;
+    width: 230px;
+    padding-top:70px;
+    padding-right: 2px;
+    padding-bottom: 70px;
+}
+#img-4 img{
+    height: 250px;
+    width: 240px;
+    padding-left:1px;
+    padding-top:20px;
+    padding-bottom: 15px;
+ 
+}
+#img-5 img{
+    height: 200px;
+    width: 240px;
+    padding-left:9px;
+    padding-top: 50px;
+    padding-bottom: 33px;
+}
+
+.providing-services{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: 93%;
+    height: 300px;
+}
+
+
+.client-services{
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.client-services img{
+    height: 300px;
+    width: 230px;
+}
+#i-1 img{
+    height: 96px;
+    width: 99px;
+    padding-top: 89px;
+    padding-left: 196px;
+    padding-right: 100px;
+}
+
+#i-2 img{
+    height: 50px;
+    width: 56px;
+    padding-top: 80px;
+    padding-left: 210px;
+    padding-right: 110px;
+    padding-bottom: 25px;
+}
+
+#i-3 img{
+    height: 96px;
+    width: 99px;
+    padding-top: 69px;
+    padding-left: 210px;
+    padding-right: 200px;
+
+}
+#services p{
+        
+    color: black;
+        text-align: center;
+        font-size: 1.1rem;
+        font-family: 'Bree serif', serif;
+        padding-bottom: 63px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 100px;
+}
+
+.client-services h3{
+    align-items: left;
+    padding-left: 200px;
+    padding-top: 25px;
+    font-family: 'Baloo Bhai' ,cursive;
+}
+#navigationbar {
+        display: flex;
+        align-items: center;
+        /* background-color: black; */
+    }
+
+    #navigationbar::before {
+        content: "";
+        /* background-color: black; */
+        position: absolute;
+       
+    }
+
+
+    #navigationbar ul {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Baloo Bhai', cursive;
+        padding-top:56px;
+        padding-left: 39px;
+        padding-bottom: 33px;
+    }
+
+    #navigationbar ul li {
+        /* list-style: none; */
+        font-size: 1.1rem;
+
+    }
+    
+
+    #navigationbar ul li a {
+        /* color: white; */
+        display: block;
+        /* text-decoration: none; */
+        text-align: center;
+        font-size: 1.2rem;
+        /* padding: 3px 36px; */
+    }
+ 
+    #navigationbar ul li a:hover {
+        color: red;
+    }
+
+ .dealers{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(228, 223, 223);
+    
+}
+
+.deal{
+    padding: 15px;
+}
+.deal img{
+    height: 100px;
+    width: 80px;
+}
+
+#deal-1 img{
+   height: 150px;
+   width: 160px;
+   padding-left: 64px;
+}
+
+
+#deal-2 img{
+    height: 175px;
+   width: 150px;
+   padding-left: 4px; 
+}
+
+#deal-3 img{
+    height: 110px;
+   width: 173px;
+   padding-left: 5px; 
+    padding-top: 34px;
+}
+
+#deal-4 img{
+    
+
+    height: 105px;
+   width: 200px;
+   padding-left: 6px;
+   padding-top: 34px;
+}
+
+#deal-5 img{
+     height: 115px;
+   width: 150px;
+   padding-left: 1px;  
+   padding-top: 34px;
+}
+
+#deal-6 img{
+    height: 143px;
+   width: 173px;
+   padding-left: 4px;
+   padding-top: 23px;
+}
+
+#paragraph h1{
+    color: red;
+    font-family: 'Baloo Bhai',cursive;
+    padding-top: 34px;
+    font-size: 1.6rem;
+    padding-bottom: 34px;
+
+}
+#paragraph p{
+    font-size: 17px;
+    padding-bottom: 3px;
+}
+
+.popupwindow {
+    background-color: rgb(243, 239, 239);
+    /* border: 2px solid rgb(182, 179, 179); */
+    /* color: blue; */
+    width: 330px;  
+    margin: -3px 150px ;
+    /*  display: none    ; */
+    position: absolute;
+
+    box-shadow: 0 1px 1px 0 rgba(100, 100, 100, 0.942);
+    border: 1px solid #161414;
+    opacity: 1;
+    /* -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; */
+    visibility: visible;
+    transition :0s 0.2s ease-in-out;
+} 
+
+.popupwindowgo{
+   visibility: hidden;
+   position: absolute;
+}
+
+
+
+.popupwindow nav{
+     padding: 30px 20px;  
+}
+.popupwindow nav ul li{
+    padding: 18px 5px;
+    list-style: none;
+    font-size: 24px;  
+}
+
+
+
+.popupwindow nav ul li a{
+    text-decoration: none;
+    color: rgb(54, 53, 53);
+}
+.popupwindow nav ul li a:hover{
+    color: rgb(230, 70, 70);
+}
+
+</style>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://img.freepik.com/free-vector/gradient-technology-logo_52683-8564.jpg?size=338&ext=jpg"
+                alt="GadaElectronics.com">
+        </div>
+
+        <div class="right">
+
+            <button class="btn"><img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="">Shop By Category</button>
+        </div>
+
+  
+        <ul>
+            <li class="item"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3075/3075908.png" alt=""> My
+                    Orders </a></li>
+
+            <li class="item"><a href="#"><img src="https://img.icons8.com/ios/1x/shopping-bag.png" alt="">No Items in
+                    the Bag </a></li>
+            <li class="item"><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/520/520464.png" alt=""> Log In
+                    /Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <div class="popupwindow popupwindowgo">
+        <nav>
+        <ul>
+            <li > <a href="#"> Fashion</a> </li>
+            <li> <a href="#">Grocery & Home Decor</a> </li>
+            <li> <a href="#">Jewellery</a></li>
+            <li> <a href="#">Furniture & Electronics</a> </li> 
+            <li> <a href="#"> Entertainment</a></li>
+        
+        </ul>
+    </nav>
+    </div>
+    <section id="main">
+        <h1 class="heading1  center"> Electronics Store </h1>
+        <!-- <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolore <br> quo provident neque magni dolorum </p> -->
+
+        <!-- <button class="btn"> Search for a Product, Brand or Category<img
+            src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""> </button> -->
+
+        <button class="button"> Order Now</button>
+    </section>
+
+
+    <div class="images">
+        <div class="box" id="image-1">
+            <img src="https://cdn.pixabay.com/photo/2013/10/22/07/56/android-199225__340.jpg" alt="">
+        </div>
+        <div class="box" id="image-2">
+            <img src="https://cdn.pixabay.com/photo/2016/04/15/02/24/computer-1330162__340.png" alt="">
+        </div>
+
+        <div class="box" id="image-3">
+            <img src="https://cdn.pixabay.com/photo/2014/10/15/22/17/apple-490485__340.jpg" alt="">
+        </div>
+    </div>
+
+    <section id="accessories">
+        <h1 class="heading1  center"> <u> More Electronic Items </u> </h1>
+        <button class=" view button"> View All </button>
+       </section>
+       <div class="items">
+            <div class="electronic-items" id="img-1">
+                <img src="https://img.freepik.com/free-vector/refrigerator-organization-set_1284-23312.jpg?size=626&ext=jpg&ga=GA1.2.411716548.1679113471&semt=sph"
+                    alt="">
+                <h3 class="rupee"> High performance refrigerator</h3>
+            </div>
+
+            <div class="electronic-items" id="img-2">
+                <img src="https://thumbs.dreamstime.com/b/washing-machine-22729169.jpg" alt="">
+                <h3 class="rupee"> Pro delute Washing Machine</h3>
+            </div>
+
+            <div class="electronic-items"  id="img-3">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjYm9va3xlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60"
+                    alt="">
+                <h3 class="rupee"> Macbook </h3>
+            </div>
+
+            <div class="electronic-items" id="img-4">
+                <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3BlYWtlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+                    alt="">
+                <h3 class="rupee"> High Quality Speakers</h3>
+            </div>
+
+            <div class="electronic-items"   id="img-5">
+                <img src="https://png.pngitem.com/pimgs/s/195-1950216_led-tv-png-hd-transparent-png.png" alt="">
+                <h3 class="rupee">Full HD Led TV </h3>
+
+            </div>
+        
+        </div>
+  
+
+    <section id="services">
+        <!-- <h1 class="heading1  center"> Services</h1> -->
+        <div class="providing-services">
+            <div class="client-services" id="i-1">
+                <img src="https://img.freepik.com/free-vector/service-everyday-label-with-pointer_1017-30333.jpg?size=338&ext=jpg&ga=GA1.2.411716548.1679113471&semt=ais"
+                    alt="">
+                <h3 class="rupee"> 24*7 Help </h3>
+                <p class="center"><a href="click here."></a> You can also talk to us to resolve the query </p>
+            </div>
+
+            <div class="client-services" id="i-2">
+                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/14/check-box-1294836__340.png" alt="">
+                <h3 class="rupee"> Paytm Trust </h3>
+                <p class="center"> All money will be refunded if the product is faulty</p>
+            </div>
+
+            <div class="client-services" id="i-3">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/442/871/small/love-heart-logo-and-symbol-free-vector.jpg"
+                    alt="">
+                <h3 class="rupee"> 100% Assurance </h3>
+                <p class="center"> Your product will reach you at any cost </p>
+            </div>
+        </div>
+    </section>
+
+    <nav id="navigationbar">
+        <ul>
+            <li class="item"><a href="#">About Us </a></li>
+            <li class="item"><a href="#">Partner with us</a></li>
+            <li class="item"><a href="#">Terms and Conditions</a></li>
+            <li class="item"><a href="#">Blogs</a></li>
+            <li class="item"><a href="#">Media</a></li>
+            <li class="item"><a href="#">Greivance policy</a></li>
+            <li class="item"><a href="#">Return/ Cancellation policy</a></li>
+        </ul>
+    </nav>
+
+    
+        <div class="dealers">
+            <div class="deal" id="deal-1">
+                <img src="https://cdn.pixabay.com/photo/2018/05/08/21/28/apple-3384010_960_720.png" alt="">
+            </div>
+
+            <div class="deal" id="deal-2">
+                <img src="https://cdn.pixabay.com/photo/2018/05/08/21/29/windows-3384024__340.png" alt="">
+            </div>
+
+
+            <div class="deal" id="deal-3">
+                <img src="https://cdn.pixabay.com/photo/2018/06/28/15/20/linkedin-3504141__340.jpg" alt="">
+            </div>
+
+            <div class="deal" id="deal-4">
+                <img src="https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658__340.png" alt="">
+            </div>
+
+            <div class="deal" id="deal-5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmi483R5kzgCxyt6bIXz--Ih-dz8nb87jli9TU4insNQ&s"
+                    alt="">
+            </div>
+
+            <div class="deal" id="deal-5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQr6q0aj2I-W3MGdynhJ7iIJAI2ltfjTWZ0_kgPNTvJg&s"
+                    alt="">
+            </div>
+
+        </div>
+
+
+
+    <section id="paragraph">
+        <h1 class="heading1  center"> Paytm Mall Eases Buying Electronics Online</h1>
+        <div>
+            <p class="center"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta assumenda eum sapiente
+
+                molestiae praesentium fugit! Voluptate voluptas maiores tempora reiciendis, ipsa iure illum, eveniet eos
+                perspiciatis provident cum dolorum quaerat nostrum similique!</p>
+        </div>
+
+        <h1 class="heading1  center"> Mobile and Accessories</h1>
+        <div>
+            <p class="center"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta assumenda eum sapiente
+                molestiae praesentium fugit! </p>
+        </div>
+    </section>
+
+
+<script src=" script.js"></script>
+</body>
+
+</html>
